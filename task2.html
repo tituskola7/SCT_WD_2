@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <main class="calculator">
+            <div class="display-container">
+                <div class="expression-display" id="expression-view" aria-live="polite"></div>
+                <div class="current-display" id="current-view" aria-live="polite">0</div>
+                <button class="copy-btn" id="copy-button" title="Copy Result" aria-label="Copy result to clipboard">
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="keypad">
+                <button class="btn btn-control" data-action="clear" id="key-clear">C</button>
+                <button class="btn btn-control" data-action="backspace" id="key-backspace"><i class="fa-solid fa-backspace"></i></button>
+                <button class="btn btn-control" data-action="percent" id="key-percent">%</button>
+                <button class="btn btn-operator" data-operator="/" id="key-divide">÷</button>
+
+                <button class="btn btn-num" data-val="7">7</button>
+                <button class="btn btn-num" data-val="8">8</button>
+                <button class="btn btn-num" data-val="9">9</button>
+                <button class="btn btn-operator" data-operator="*" id="key-multiply">×</button>
+
+                <button class="btn btn-num" data-val="4">4</button>
+                <button class="btn btn-num" data-val="5">5</button>
+                <button class="btn btn-num" data-val="6">6</button>
+                <button class="btn btn-operator" data-operator="-" id="key-subtract">−</button>
+
+                <button class="btn btn-num" data-val="1">1</button>
+                <button class="btn btn-num" data-val="2">2</button>
+                <button class="btn btn-num" data-val="3">3</button>
+                <button class="btn btn-operator" data-operator="+" id="key-add">+</button>
+
+                <button class="btn btn-num" data-val="0">0</button>
+                <button class="btn btn-num" data-val=".">.</button>
+                <button class="btn btn-operator" data-action="sqrt" title="Square Root" id="key-sqrt">√</button>
+                <button class="btn btn-equals" data-action="calculate" id="key-equals">=</button>
+            </div>
+        </main>
+
+        <aside class="history-panel" aria-label="Calculation History">
+            <div class="history-header">
+                <h3><i class="fa-solid fa-history"></i> History</h3>
+                <button id="clear-history" title="Clear History" aria-label="Clear all history entries">Clear</button>
+            </div>
+            <div class="history-log" id="history-log">
+                <p class="empty-msg">No recent calculations</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
